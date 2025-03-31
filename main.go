@@ -40,7 +40,7 @@ func main() {
 	}
 	defer f.Close()
 
-	nameRegex := regexp.MustCompile(`^#\s*(\w+)\s*:`)
+	nameRegex := regexp.MustCompile(`^#\s*(\w+)\s*`)
 	curlRegex := regexp.MustCompile(`^curl\s+(.*)`)
 	paramRegex := regexp.MustCompile(`\{\{(\w+)\}\}`)
 
