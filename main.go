@@ -11,6 +11,7 @@ import (
 	"regexp"
 	"strings"
 	"text/template"
+	"time"
 )
 
 //go:embed py.tmpl
@@ -112,9 +113,11 @@ func main() {
 
 	data := struct {
 		InputFile string
+		Date      string
 		Commands  []Command
 	}{
 		InputFile: inputFile,
+		Date:      time.Now().Format("2006-01-02"), // Use the current date
 		Commands:  commands,
 	}
 
